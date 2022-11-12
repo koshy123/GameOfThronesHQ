@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
 import React from "react"
 
 
 
-const Url = "https://dog.ceo/api/breeds/image/random"
+const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
 function App() {
 
 
+
+  const [post, setPost] = React.useState(null);
+
+    React.useEffect(() => {
+    axios.get(Url).then((response) => {
+     setPost(response.data);
+      console.log(post)
+    });
+  }, []);
+  if (!post) return null;
   return (
     <div className="Component">
 
-      <main>
-   
-      <p>HI</p>
 
-      <button>  </button>
+      <nav className='Nav'>
+        Game of Thrones quotes
+      </nav>
+      <main>
+        
+   
+      <p> {post.sentence}</p>
+
+      
       </main>
 
     </div>

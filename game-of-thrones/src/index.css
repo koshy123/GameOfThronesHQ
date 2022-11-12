@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.Nav{
+  border-bottom: 2px black dashed;
+  font-size: 20px;
+}
