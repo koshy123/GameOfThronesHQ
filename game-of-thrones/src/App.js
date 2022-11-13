@@ -27,9 +27,9 @@ function App() {
         Game of Thrones quotes
       </nav>
       <main>
-        
+
    
-      <p> {post.sentence}</p>
+      <p className='Quote'> {post.sentence}</p>
 
       
       </main>
