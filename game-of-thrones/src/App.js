@@ -2,24 +2,14 @@ import './App.css';
 import axios from "axios";
 import React from "react"
 import NavBar from './NavBar';
+import Quote from './components/Quote';
 
-
-
-const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
 function App() {
 
 
 
-  const [post, setPost] = React.useState(null);
 
-    React.useEffect(() => {
-    axios.get(Url).then((response) => {
-     setPost(response.data);
-      console.log(post)
-    });
-  }, []);
-  if (!post) return null;
   return (
     <div className="Component">
 
@@ -31,8 +21,7 @@ function App() {
       <main>
 
    
-      <p className='Quote'> {post.sentence}</p>
-
+      <Quote/>
       
       </main>
 

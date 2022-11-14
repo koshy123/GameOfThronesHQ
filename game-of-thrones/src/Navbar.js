@@ -1,5 +1,5 @@
 import {React, useState, useEffect } from "react"
-
+import AboutMe from "./components/AboutMe";
 
 
 function NavBar () {
@@ -9,7 +9,7 @@ function NavBar () {
 
       <div className="navBar">
         <h1 className="title"> Game Of Thrones</h1>
-        <h1 className="aboutMe"> About Me</h1>
+        <h1 className="aboutMe"> <AboutMe/></h1>
       </div>
     );
   };
