@@ -1,6 +1,7 @@
 import './App.css';
 import axios from "axios";
 import React from "react"
+import NavBar from './NavBar';
 
 
 
@@ -24,7 +25,8 @@ function App() {
 
 
       <nav className='Nav'>
-        Game of Thrones quotes
+        <NavBar/>
+      
       </nav>
       <main>
 

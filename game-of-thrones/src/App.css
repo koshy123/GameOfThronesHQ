@@ -1,7 +1,11 @@
-.Nav{
-  font-size: 30px;
+.navBar{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
 }
-
+.title, .aboutMe{
+  color: green;
+}
 .Quote{
   font-family: cursive;
   font-size: 25px
