@@ -1,16 +1,21 @@
-import React from "react"
+import React from "react";
+import { useParams } from "react-router-dom";
 import Quote from "./Quote";
+import App from "../App";
 
+const ShowPage = ({setData}) => {
+console.log(setData)
 
-class Person extends React.Component {
-    render() {
+    const {name} = useParams()
+
+return (
+        <div>
+            This should show the name of person and details 
+
             
-            return (
-                <div>
-
-                </div>
-            );
-        }
-    }
-   export default Person;
-   
+        </div>
+      );
+    };
+      
+  export default ShowPage;
+  
