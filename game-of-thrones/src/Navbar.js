@@ -1,5 +1,5 @@
-import {React, useState, useEffect } from "react"
-import AboutMe from "./components/AboutMe";
+import React from "react"
+import {Link} from "react-router-dom"
 
 
 function NavBar () {
@@ -8,10 +8,12 @@ function NavBar () {
  return (
 
       <div className="navBar">
-        <h1 className="title"> Game Of Thrones</h1>
-        <h1 className="aboutMe"> <AboutMe/></h1>
+      <Link to= "/components/Quote"> <h1 className="title"> Game Of Thrones</h1></Link> 
+
+      <Link to='/components/AboutMe' className='AboutMe'><h1> AboutMe </h1></Link>
+
       </div>
     );
   };
     
-export default NavBar;
+  export default NavBar;
