@@ -11,3 +11,19 @@
   font-size: 25px
   ;
 }
+.Component{
+  background-color: aqua;
+}
+
+.clickPerson{
+  font-size: 15px;
+}
+
+.imagePic{
+  max-width:100%;
+    height:auto;
+}
+
+.about{
+  font-family: 'Times New Roman', Times, serif;
+}

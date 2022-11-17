@@ -1,4 +1,5 @@
 import React  from "react"
+import { Link } from "react-router-dom";
 
 
 
@@ -8,15 +9,21 @@ import React  from "react"
 
 const Quote = (props) => {
 
-console.log(props.post.sentence)
 
 
-
+ 
+    
 return (
         <div>
+            <Link to='/components/Person' ><h1 className="clickPerson"> Person Name </h1></Link>
+            <button onClick={props.nextQuote}> click </button>
 
-            {props.post.character.name}
-        </div>
+            <h3>"{props.post.sentence}"</h3>
+
+            
+</div>
+
+
       );
     };
       

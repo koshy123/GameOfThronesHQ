@@ -2,13 +2,18 @@ import React from "react";
 
 
 
-const ShowPage = () => {
+const ShowPage = (props) => {
 
 
 return (
         <div>
-            This should show the name of person and details 
+<section>
+<h1>{props.post.character.name}</h1>
 
+<h3> "{props.post.sentence}" </h3>
+
+
+</section>
             
         </div>
       );
