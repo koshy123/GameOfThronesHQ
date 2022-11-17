@@ -1,12 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import Quote from "./Quote";
-import App from "../App";
 
-const ShowPage = ({setData}) => {
-console.log(setData)
 
-    const {name} = useParams()
+
+const ShowPage = () => {
+
 
 return (
         <div>
