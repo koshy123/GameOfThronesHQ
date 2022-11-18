@@ -1,32 +1,49 @@
-import React from "react";
-import '.././App.css';
+import { useState } from "react";
 
 
-const Icon = () => {
-  return (
-    <svg height="20" width="20" viewBox="0 0 20 20">
-      <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
-    </svg>
-  );
-};
-
-const Dropdown = ({ placeHolder }) => {
-  const getDisplay = () => {
-    return placeHolder;
+const ThemeSwitcher = () => {
+  const [theme, setTheme] = useState(null);
+  const resetTheme = () => {
+    setTheme(null);
   };
-
+  const themeClass = theme ? theme.toLowerCase() : "secondary";
   return (
-    <div className="dropdown-container">
-      <div className="dropdown-input">
-        <div className="dropdown-selected-value">{getDisplay()}</div>
-        <div className="dropdown-tools">
-          <div className="dropdown-tool">
-            <Icon />
-          </div>
+    <>
+      <div
+        className={`text-capitalize h1 mb-4 w-100 text-center text-${themeClass}`}
+      >
+        {`${theme || "Explore the World of Ice and"} Fire`}
+      </div>
+      <div className="btn-group">
+        <button className={`text-capitalize btn btn-${themeClass} btn-lg"`} type="button">
+          {theme ? theme + " theme" : "Choose Theme"}
+        </button>
+        <button
+          type="button"
+          className={`btn btn-lg btn-${themeClass} dropdown-toggle dropdown-toggle-split`}
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span className="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <div className="dropdown-menu">
+          <a className="dropdown-item" onClick={() => setTheme("primary")}>
+            Primary Theme
+          </a>
+          <a className="dropdown-item" onClick={() => setTheme("danger")}>
+            Danger Theme
+          </a>
+          <a
+            className="dropdown-item" onClick={() => setTheme("success")}>
+            Success Theme
+          </a>
+          <div className="dropdown-divider"></div>
+          <a className="dropdown-item" href="#" onClick={() => resetTheme()}>
+            Default Theme
+          </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-
-export default Dropdown;
+export default ThemeSwitcher;

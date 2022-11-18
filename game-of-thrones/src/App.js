@@ -7,7 +7,7 @@ import Person from './components/Person';
 import AboutMe from './components/AboutMe';
 import axios from "axios";
 import Footer from './Footer';
-import DropDown from './components/DropDown';
+import ThemeSwitcher from './components/DropDown';
 
 const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
@@ -25,14 +25,13 @@ function nextQuote(){
   setQuote(!quote)
 }
 
-
   return (
     <div className="Component">
       <nav className='Nav'>
         <NavBar/>
       </nav>
-      <DropDown placeHolder="Drop Down"/>
-      <main>
+          <ThemeSwitcher/>
+        <main>
         <Routes>
           <Route  path='/components/Quote' element={<Quote post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
