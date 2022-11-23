@@ -1,7 +1,9 @@
-## Game-Of-Thrones
-Project-2
+# Project Overview
 
 ## Project Description
+This app is intented to be for those that have watched Game of Thrones and also for those that have never seen it. They can get a good idea of the show by seeing quotes from the show and see the names of characters as well.
+
+## Project Links
 - [github repo](https://github.com/koshy123/Game-Of-Thrones) 
 - [deployment](https://game-of-thrones-medp.vercel.app/components/Quote) 
 - [demo recording]()
