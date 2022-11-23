@@ -54,6 +54,7 @@ Axios- to pull the data from API
 Bootstrap - uploaded to make CSS easier
 ReactRouter- to use Routes and Route
 react - to use Link
+https://gameofthronesquotes.xyz/  - The API library used for data
 
 ## Code Snippet
 This is the code that allows me to click another random quote.
