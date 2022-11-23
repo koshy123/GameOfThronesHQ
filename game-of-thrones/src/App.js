@@ -7,7 +7,7 @@ import Person from './components/Person';
 import AboutMe from './components/AboutMe';
 import axios from "axios";
 import Footer from './Footer';
-import DropDown from './components/DropDown';
+import ThemeSwitcher from './components/DropDown';
 
 const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
@@ -25,19 +25,20 @@ function nextQuote(){
   setQuote(!quote)
 }
 
-
   return (
     <div className="Component">
       <nav className='Nav'>
         <NavBar/>
       </nav>
-      <DropDown placeHolder="Drop Down"/>
-      <main>
+          <ThemeSwitcher/>
+        <main>
         <Routes>
           <Route  path='/components/Quote' element={<Quote post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
           <Route  path='/components/Person' element={<Person post={post} />} />
         </Routes>
+
+        <h1>Disclaimer: some quotes may be offensive</h1>
 
         <img className='imagePic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
       </main>
