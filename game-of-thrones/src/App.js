@@ -7,7 +7,6 @@ import Person from './components/Person';
 import AboutMe from './components/AboutMe';
 import axios from "axios";
 import Footer from './Footer';
-import DropDown from './components/DropDown';
 
 const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
@@ -27,21 +26,22 @@ function nextQuote(){
 
 
   return (
-    <div className="Component">
-      <nav className='Nav'>
+    <div className="component">
+      <nav className='nav'>
         <NavBar/>
       </nav>
-      <DropDown placeHolder="Drop Down"/>
-      <main>
-        <Routes>
+      <main className='main'>
+       <div className='div-quote'>
+        <Routes >
           <Route  path='/components/Quote' element={<Quote post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
           <Route  path='/components/Person' element={<Person post={post} />} />
         </Routes>
-
-        <img className='imagePic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
+      </div> 
+      <section className='disclaimer'><h1>Disclaimer</h1></section>
       </main>
-      <footer><Footer/></footer>
+      <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
+      <footer className='footer'><Footer/></footer>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const Footer = () => {
 
 
 return (
-        <div>
+        <div className="footer-css">
 
 Copyright is to Game of Thones Series and books
             

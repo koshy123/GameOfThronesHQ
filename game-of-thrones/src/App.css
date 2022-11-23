@@ -1,32 +1,55 @@
-.navBar{
+.nav-bar{
   font-size: 20px;
   display: flex;
   justify-content: space-around;
+  border-bottom: 2px black solid;
 }
 .title, .aboutMe{
   color: green;
 }
 .Quote{
   font-family: cursive;
-  font-size: 25px
-  ;
+  font-size: 25px;
 }
-.Component{
+.component{
   background-color: aqua;
 }
 
-.clickPerson{
-  font-size: 15px;
-}
 
-.imagePic{
-  max-width:100%;
-    height:auto;
-}
 
-.about{
+
+.about-me{
   font-family: 'Times New Roman', Times, serif;
 }
 .footer{
   color: green;
+}
+
+.footer-css{
+  font-size: 20px;
+}
+
+.disclaimer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.click-person{
+  font-size: 15px;
+}
+
+.div-quote{
+  display: flex;
+  justify-content: flex-start;
+}
+.image-pic{
+  display: flex;
+  align-items: flex-end;
+  max-width:100%;
+    height:auto;
 }
