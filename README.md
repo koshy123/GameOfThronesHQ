@@ -6,7 +6,7 @@ This app is intented to be for those that have watched Game of Thrones and also 
 ## Project Links
 - [github repo](https://github.com/koshy123/Game-Of-Thrones) 
 - [deployment](https://game-of-thrones-medp.vercel.app/components/Quote) 
-- [demo recording]()
+- [demo recording](https://www.youtube.com/watch?v=bMEqVAE7A04&ab_channel=JeffreyKoshy)
 
 ## Wireframes & React Component Hierarchy
 
