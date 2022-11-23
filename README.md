@@ -2,9 +2,9 @@
 Project-2
 
 ## Project Description
-- https://github.com/koshy123/Game-Of-Thrones
-- DEPLOYMENT https://game-of-thrones-medp.vercel.app/components/Quote
-- 
+- [github repo](https://github.com/koshy123/Game-Of-Thrones) 
+- [deployment](https://game-of-thrones-medp.vercel.app/components/Quote) 
+- [demo recording]()
 
 ## Wireframes & React Component Hierarchy
 
