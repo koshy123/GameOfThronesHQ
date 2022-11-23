@@ -11,7 +11,7 @@ This app is intented to be for those that have watched Game of Thrones and also 
 ## Wireframes & React Component Hierarchy
 
 - [wireframes](https://res.cloudinary.com/dnhqnd8pv/image/upload/v1669218989/IMG_4706_n6ayzm.heic) 
-- [react architecture](https://res.cloudinary.com/dnhqnd8pv/image/upload/v1669222964/architecture_yacbwu.png)
+- [react architecture](https://res.cloudinary.com/dnhqnd8pv/image/upload/v1669229056/Folder_Setup_onfujg.png)
 
 
 ### MVP/PostMVP
