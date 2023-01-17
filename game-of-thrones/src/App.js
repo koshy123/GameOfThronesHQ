@@ -24,7 +24,6 @@ function App() {
 function nextQuote(){
   setQuote(!quote)
 }
-
   return (
     <div className="component">
       <nav className='nav'>
@@ -38,11 +37,9 @@ function nextQuote(){
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
           <Route  path='/components/Person' element={<Person post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/House' element={<House post={post} nextQuote ={nextQuote} />} />
-
         </Routes>
       </div> 
             <div className='disclaimer'><h1>We would like to let the user know that some quotes may be offensive.</h1></div>
-
       </main>
       <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
       <footer className='footer'><Footer/></footer>

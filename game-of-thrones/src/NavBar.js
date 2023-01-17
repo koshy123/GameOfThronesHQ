@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import nav from "./nav.css"
 
 function NavBar () {
 return (
@@ -11,5 +12,4 @@ return (
       </div>
     );
   };
-    
 export default NavBar;

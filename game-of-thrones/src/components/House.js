@@ -8,8 +8,6 @@ return (
                 <button onClick={props.nextQuote}> click for new quote </button>
                 <h1>{props.post.character.house.name}</h1>
                 <h1>{props.post.character.name}</h1>
-
-
             </section>
         </div>
       );
