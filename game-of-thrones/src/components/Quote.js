@@ -28,6 +28,7 @@ const Quote = (props) => {
 
 const [answer, setAnswer] = useState("");
 const [score, setScore] = useState(0);
+const [answerVisible, setAnswerVisible] = useState(false);
 
 function handleChange(event) {
   setAnswer(event.target.value);
@@ -38,9 +39,19 @@ function handleSubmit() {
     alert("Correct!");
     setScore(score + 1);
   } else {
-    alert("Incorrect, the correct answer is Paris");
+    alert("Wrong, click below for anwser");
   }
 }
+    console.log(score)
+
+
+      function handleMouseOver() {
+        setAnswerVisible(true);
+      }
+      function handleMouseLeave(){
+        setAnswerVisible(false);
+      }
+    
 
 return (
         <div>
@@ -50,6 +61,11 @@ return (
       <input type="text" value={answer} onChange={handleChange}/>
       <button onClick={handleSubmit}>Submit</button>
     </div>
+    <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+        {answerVisible ? props.post.character.name : "Hover over me to reveal the answer"}
+      </div>
+
+
             <Link to='/components/Person' ><h1 className="click-person"> Person Name </h1></Link>
         </div>
       );
