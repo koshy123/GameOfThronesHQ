@@ -7,9 +7,8 @@ const Footer = () => {
 
 return (
         <div className="footer-css">
-
-Copyright is to Game of Thones Series and books
-            
+<p>Copyright is to Game of Thones Series and books</p>
+            <p>**Some quotes  may be offensive**</p>
         </div>
       );
     };
