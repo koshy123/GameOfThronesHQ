@@ -2,9 +2,12 @@
     text-align: center;
 }
 .title, .about-me{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   color: green;
   text-decoration: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Game of Thrones';
 
 }
 
@@ -12,4 +15,7 @@
 .nav{
     display: flex;
     width: 100%;
+}
+.nav-title{
+  font-family: 'Game of Thrones'
 }

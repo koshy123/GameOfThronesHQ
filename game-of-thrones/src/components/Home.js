@@ -9,6 +9,7 @@ import walker from "./images/walker.jpeg"
 const Home =  () => {
     return (
          <div  >
+            <h1 className="title">Home Page</h1>
             <p className="intro">
                 Hi, Welcome to this app. You can play a game that will test your knowledge of Game of Throne quotes.
                 </p>
