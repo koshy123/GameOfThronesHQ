@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe';
 import axios from "axios";
 import Footer from './Footer';
 import House from './components/House';
+import Home from './components/Home';
 
 const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
@@ -29,18 +30,17 @@ function nextQuote(){
       <nav className='nav'>
         <NavBar/>
       </nav>
-      <h1 className='title-name'>The Game of Thrones</h1>
       <main className='main'>
        <div className='div-quote'>
         <Routes >
           <Route  path='/components/Quote' element={<Quote post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
+          <Route  path='/components/Home' element={<Home/>} />
           <Route  path='/components/Person' element={<Person post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/House' element={<House post={post} nextQuote ={nextQuote} />} />
         </Routes>
       </div> 
       </main>
-      <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
       <footer className='footer'><Footer/></footer>
     </div>
   );

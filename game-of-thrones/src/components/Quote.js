@@ -55,6 +55,7 @@ function handleSubmit() {
 
 return (
         <div>
+          <h1 className="title">GOT Game</h1>
             <h3 className="quote">"{props.post.sentence}"</h3>
             <Button onClick={props.nextQuote}> click for new quote </Button>
             <div>
@@ -67,6 +68,8 @@ return (
 
 
             <Link to='/components/Person' ><h1 className="click-person"> Person Name </h1></Link>
+            <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
+
         </div>
       );
     };

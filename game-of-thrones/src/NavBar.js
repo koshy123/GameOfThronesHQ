@@ -1,16 +1,34 @@
 import React from "react"
 import {Link} from "react-router-dom"
 import nav from "./nav.css"
+import logo from "./components/images/got-title.avif"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar () {
 return (
-    // NavBar
-      <div className="nav-bar">
-        <h1 className="text-3xl font-bold underline">Game of Thrones</h1>
-      <Link to= "/components/Quote"> <h1 className="title"> Quotes </h1></Link> 
-      <Link to='/components/AboutMe' className='about-me'><h1> AboutMe </h1></Link>
-      <h1>House of the Dragon</h1>
-      </div>
+  <Navbar className="nav" bg="light" expand="lg">
+  <Container>
+  <img  src={logo} width="100" height="50"></img>
+
+    <Navbar.Brand href="#home">Game of Thrones</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+         <Link to='/components/Quote' className='about-me'><Nav.Link  href="#link" > Game</Nav.Link> </Link> 
+
+        <Link to='/components/AboutMe' className='about-me'><Nav.Link  href="#link">About</Nav.Link> </Link>
+        <Link to='/components/Home' className='about-me'><Nav.Link  href="#link">Home</Nav.Link> </Link>
+
+      </Nav>
+    </Navbar.Collapse>
+
+  </Container>
+</Navbar>
+
     );
   };
 export default NavBar;
+
