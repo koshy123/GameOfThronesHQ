@@ -35,7 +35,7 @@ function nextQuote(){
         <Routes >
           <Route  path='/components/Quote' element={<Quote post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
-          <Route  path='/components/Home' element={<Home/>} />
+          <Route  path='/' element={<Home/>} />
           <Route  path='/components/Person' element={<Person post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/House' element={<House post={post} nextQuote ={nextQuote} />} />
         </Routes>
