@@ -4,3 +4,11 @@
     margin: 20px;
     justify-content: center;
 }
+
+.image-pic{
+    display: flex;
+    align-items: flex-end;
+    max-width:100%;
+      height:auto;
+  }
+  
