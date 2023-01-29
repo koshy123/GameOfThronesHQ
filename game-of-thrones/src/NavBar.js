@@ -16,18 +16,14 @@ return (
     <Navbar.Brand href="#home" className="nav-title">Game of Thrones</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-         <Link to='/components/Quote' className='about-me'><Nav.Link  href="#link" > Game</Nav.Link> </Link> 
-
-        <Link to='/components/AboutMe' className='about-me'><Nav.Link  href="#link">About</Nav.Link> </Link>
-        <Link to='/' className='about-me'><Nav.Link  href="#link">Home</Nav.Link> </Link>
-
+      <Nav className="me-auto">        
+      <Link to='/' className='about-me'><Nav.Link  href="#link">Home</Nav.Link> </Link>
+      <Link to='/components/Quote' className='about-me'><Nav.Link  href="#link" > Game</Nav.Link> </Link> 
+      <Link to='/components/AboutMe' className='about-me'><Nav.Link  href="#link">About</Nav.Link> </Link>
       </Nav>
     </Navbar.Collapse>
-
   </Container>
 </Navbar>
-
     );
   };
 export default NavBar;

@@ -31,7 +31,7 @@ function nextQuote(){
         <NavBar/>
       </nav>
       <main className='main'>
-       <div className='div-quote'>
+       <div>
         <Routes >
           <Route  path='/components/Quote' element={<Quote post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/AboutMe' element={<AboutMe/>} />
