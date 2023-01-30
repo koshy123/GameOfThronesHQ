@@ -3,12 +3,13 @@
     font-size: 20px;
     margin: 20px;
     justify-content: center;
+    font-family: cursive;
 }
 
 .image-pic{
     display: flex;
     align-items: flex-end;
-    max-width:100%;
-      height:auto;
+    width: 100%;
+    height:auto;
   }
   

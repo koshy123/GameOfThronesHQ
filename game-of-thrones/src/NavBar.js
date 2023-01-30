@@ -20,6 +20,8 @@ return (
       <Link to='/' className='about-me'><Nav.Link  href="#link">Home</Nav.Link> </Link>
       <Link to='/components/Quote' className='about-me'><Nav.Link  href="#link" > Game</Nav.Link> </Link> 
       <Link to='/components/AboutMe' className='about-me'><Nav.Link  href="#link">About</Nav.Link> </Link>
+      <Link to='/House_of_the_Dragon' className='about-me'><Nav.Link  href="#link">House of The Dragon</Nav.Link> </Link>
+
       </Nav>
     </Navbar.Collapse>
   </Container>

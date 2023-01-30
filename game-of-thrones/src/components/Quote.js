@@ -56,7 +56,7 @@ const Quote = (props) => {
 
   return (
     <div>
-      <h1 className="title">GOT Game</h1>
+      <h1 className="title">Guess the Quote</h1>
       <div className="got_game">
         <div>
           <h3 className="quote">"{props.post.sentence}"</h3>

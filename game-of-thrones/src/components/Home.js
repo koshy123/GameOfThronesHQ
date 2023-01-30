@@ -26,7 +26,7 @@ const Home =  () => {
       
      const Character = ({name, imageUrl}) => (
         <div  class="row" >
-                        <h1 >{name}</h1>
+                        <h2 >{name}</h2>
                         <img className=".img-circle"   src={imageUrl}/>
 
         </div>
@@ -34,7 +34,7 @@ const Home =  () => {
     return (
         <div class="container">
         <h1 className="title">Home Page</h1>
-        <p className="intro"> Hi, Welcome to this app. You can play a game that will test your knowledge of Game of Throne quotes.</p>
+        <p className="intro"> Below are the names and images of the main Characters of the Game of Thrones hit TV show.  </p>
         <div class="container" >
         <div class="row">
                 {data.map((item,index) => 

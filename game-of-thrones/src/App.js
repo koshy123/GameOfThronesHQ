@@ -9,6 +9,7 @@ import axios from "axios";
 import Footer from './Footer';
 import House from './components/House';
 import Home from './components/Home';
+import Dragon from './components/Dragon';
 
 const Url = "https://api.gameofthronesquotes.xyz/v1/random"
 
@@ -38,6 +39,8 @@ function nextQuote(){
           <Route  path='/' element={<Home/>} />
           <Route  path='/components/Person' element={<Person post={post} nextQuote ={nextQuote} />} />
           <Route  path='/components/House' element={<House post={post} nextQuote ={nextQuote} />} />
+          <Route  path='/House_of_the_Dragon' element={<Dragon post={post} nextQuote ={nextQuote} />} />
+
         </Routes>
       </div> 
       </main>
