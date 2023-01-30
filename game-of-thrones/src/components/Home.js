@@ -19,33 +19,33 @@ const Home =  () => {
       useEffect(() => {
         fetchData();
       },[])
-      console.log(data)
-      
-      const mapArray = data.map(item => {
-            return( 
-                item.imageUrl
-                ); 
 
+      const fullName = data.map(item=> {
+            return item.fullName; 
       })
+      
+     const Character = ({name, imageUrl}) => (
+        <div  class="row" >
+                        <h1 >{name}</h1>
+                        <img className=".img-circle"   src={imageUrl}/>
 
+        </div>
+    )
     return (
-         <div  >
-            <h1 className="title">Home Page</h1>
-            <p className="intro">
-                Hi, Welcome to this app. You can play a game that will test your knowledge of Game of Throne quotes.
-                </p>
-
-            <img src= {mapArray} />
-
-            {/* <div className="photos">
-                <img src={john}></img>
-                <img src={ned}></img>
-                <img src={tyrion}></img>
-                <img src={walker}></img>
-
-            </div> */}
+        <div class="container">
+        <h1 className="title">Home Page</h1>
+        <p className="intro"> Hi, Welcome to this app. You can play a game that will test your knowledge of Game of Throne quotes.</p>
+        <div class="container" >
+        <div class="row">
+                {data.map((item,index) => 
+               <div class="col-sm" > 
+               <Character key={index} imageUrl={item.imageUrl} name={item.fullName} /> </div>)}
+         </div>
+         </div>
          </div>
        );
      };
+
+
 export default Home;
    
