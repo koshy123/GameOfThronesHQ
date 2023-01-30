@@ -1,6 +1,7 @@
 .quote{
     font-family: cursive;
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: 5%;
   }
   
 .click-person{
@@ -9,4 +10,11 @@
 
 .got_game{
   margin: 10px;
+}
+
+.answer{
+  margin-left: 70%;
+}
+.title{
+  margin-bottom: 5%;
 }

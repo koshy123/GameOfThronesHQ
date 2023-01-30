@@ -40,8 +40,12 @@ const Quote = (props) => {
       alert("Correct!");
       setScore(score + 1);
     } else {
-      alert("Wrong, click below for anwser");
+      alert("Wrong, hover over below");
     }
+    setAnswer("");
+    props.nextQuote();
+
+
   }
   console.log(score)
 
@@ -58,16 +62,21 @@ const Quote = (props) => {
     <div>
       <h1 className="title">Guess the Quote</h1>
       <div className="got_game">
-        <div>
-          <h3 className="quote">"{props.post.sentence}"</h3>
-          <Button onClick={props.nextQuote}> click for new quote </Button>
-          <input type="text" value={answer} onChange={handleChange} />
-          <button onClick={handleSubmit}>Submit</button>
+        <div className="container border border-2 border-black">
+          <div class="d-flex justify-content-between">
+          <h3 className="quote mt-3">"{props.post.sentence}"</h3>  
+          <button class="btn btn-primary h-25 mt-4" onClick={props.nextQuote}> New Quote </button>
+          </div>
+          <div class="d-flex justify-content-between"     >
+          <p className="quote">Who said this quote?</p>
+          <input  type="text" value={answer} onChange={handleChange} />
+          <Button className=""  onClick={handleSubmit}>Submit</Button> <br></br>
+          </div>
+        
+        <div className="answer" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+          {answerVisible ? props.post.character.name : "Answer"}
         </div>
-        <div onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-          {answerVisible ? props.post.character.name : "Hover over me to reveal the answer"}
         </div>
-
       {/* <Link to='/components/Person' ><h1 className="click-person"> Person Name </h1></Link> */}
       </div>
       <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg' />
