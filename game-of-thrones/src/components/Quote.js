@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 import "./css/quote.css";
 
@@ -62,12 +61,10 @@ const Quote = (props) => {
     <div>
       <h1 className="title">Guess the Quote</h1>
       <div className="got_game">
-        <div className="container border border-2 border-black">
+        <div className="container">
           <div class="d-flex justify-content-between">
           <h3 className="quote mt-4">"{props.post.sentence}"</h3>  
           <button class="btn btn-primary h-25 mt-4" onClick={props.nextQuote}> Skip This Question </button>
-
-       
           </div>
           <div class="d-flex justify-content-evenly"     >
           <p className="quote">Who said this quote?</p>
@@ -75,6 +72,7 @@ const Quote = (props) => {
           <Button class="btn btn-primary h-25" onClick={handleSubmit}>Submit</Button> <br></br>
           <p className="mt-4" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
           {answerVisible ? props.post.character.name : "Anwser Box"}
+          <p>Score={score}</p>
         </p>
           </div>
         
