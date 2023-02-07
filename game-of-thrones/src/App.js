@@ -44,7 +44,7 @@ function nextQuote(){
         </Routes>
       </div> 
       </main>
-      <footer className='footer'><Footer/></footer>
+      <footer className='footer' bg="light" expand="lg" ><Footer/></footer>
     </div>
   );
 }

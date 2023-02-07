@@ -9,8 +9,6 @@ import walker from "./images/walker.jpeg"
 const Home =  () => {
 
     const [data, setData] = useState([]);
-
-
     const fetchData = () => {
         return fetch("https://thronesapi.com/api/v2/Characters")
               .then((response) => response.json())
@@ -19,19 +17,17 @@ const Home =  () => {
       useEffect(() => {
         fetchData();
       },[])
-
       const fullName = data.map(item=> {
             return item.fullName; 
       })
       
      const Character = ({name, imageUrl}) => (
         <div  class="row" >
-                        <h2 >{name}</h2>
-                        <img className=".img-circle"   src={imageUrl}/>
-
+        <h2 >{name}</h2>
+        <img className=".img-circle"   src={imageUrl}/>
         </div>
-    )
-    return (
+          )
+    return (  
         <div class="container">
         <h1 className="title">Home Page</h1>
         <p className="intro"> Below are the names and images of the main Characters of the Game of Thrones hit TV show.  </p>

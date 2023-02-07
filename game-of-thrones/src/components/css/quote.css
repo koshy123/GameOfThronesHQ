@@ -2,6 +2,7 @@
     font-family: cursive;
     font-size: 20px;
     margin-bottom: 5%;
+    margin-right: 2%;
   }
   
 .click-person{
@@ -17,11 +18,31 @@
 }
 .title{
   margin-bottom: 5%;
+  padding-top: 2%;
 }
 
 .input_box{
   width: 200px;
   height: 50px;
+  margin-right: 2%;
+  background-color: lightgrey;
+
+}
+.bottom_photo{
+  width: 100%;
 }
 
+.tips{
+  display: flex;
+  justify-content: space-between;
+}
 
+.a_tip{
+  border: solid black;
+}
+
+.photos{
+  display: flex;
+  height: 200px;
+  width: 350px;
+}

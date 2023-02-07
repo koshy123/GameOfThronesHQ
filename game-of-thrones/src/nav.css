@@ -4,7 +4,6 @@
 .title, .about-me{
   display: flex;
   justify-content: center;
-  margin-top: 10px;
   color: green;
   text-decoration: none;
   font-family: 'Game of Thrones';

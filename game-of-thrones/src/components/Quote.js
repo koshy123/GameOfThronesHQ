@@ -1,34 +1,16 @@
-import React, { useState } from "react"
+import React, { useState , useEffect} from "react"
 import { Button } from 'react-bootstrap';
 import "./css/quote.css";
 
 const Quote = (props) => {
 
 
-  // let score = 0;
-
-  // function checkAnswer(answer, correctAnswer) {
-  //   if (answer === correctAnswer) {
-  //     score++;
-  //     return "Correct! Your score is now " + score;
-  //   } else {
-  //     return "Incorrect. The correct answer is " + correctAnswer + ". Your score is still " + score;
-  //   }
-  // }
-
-
-
-  // let input = document.getElementById("answer-input");
-  // let submitBtn = document.getElementById("submit-btn");
-
-  // submitBtn.addEventListener("click", function(){
-  //     let answer = input.value;
-  //     console.log(answer);
-  // });
 
   const [answer, setAnswer] = useState("");
   const [score, setScore] = useState(0);
   const [answerVisible, setAnswerVisible] = useState(false);
+  const [data, setData] = useState([]);
+
 
   function handleChange(event) {
     setAnswer(event.target.value);
@@ -46,7 +28,6 @@ const Quote = (props) => {
 
 
   }
-  console.log(score)
 
 
   function handleMouseOver() {
@@ -57,32 +38,63 @@ const Quote = (props) => {
   }
 
 
+  const fetchData = () => {
+      return fetch("https://thronesapi.com/api/v2/Characters")
+            .then((response) => response.json())
+            .then((data) => setData(data));
+    }
+    useEffect(() => {
+      fetchData();
+    },[])
+    const fullName = data.map(item=> {
+          return item.fullName; 
+    })
+    
+   const Character = ({name, imageUrl}) => (
+      <div  class="row" >
+      <h2 >{name}</h2>
+      <img className=".img-circle"   src={imageUrl}/>
+      </div>
+        )
+
+
   return (
     <div>
       <h1 className="title">Guess the Quote</h1>
       <div className="got_game">
         <div className="container">
           <div class="d-flex justify-content-between">
+            <p>Game Instructions:<br></br> 1. Read the quote below.<br></br> 2. Guess the name of which GOT character has said the quote.<br></br> 3. Have fun!  </p> <br></br>
+          </div>
+          <div>
           <h3 className="quote mt-4">"{props.post.sentence}"</h3>  
+
+          </div>
+          <div class="d-flex justify-content-start"     >
+          <p className="quote">Who said this quote?</p>
+          <input className="input_box"   type="text" value={answer} onChange={handleChange} />
+          <Button class="btn btn-primary h-25" onClick={handleSubmit}>Submit</Button> 
+            </div>
+
+          <div className="tips">
+          <p className="mt-4 a_tip" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+           {answerVisible ? props.post.character.house.name : " Hover over for the house name! "} </p>
+          <p>Current Score: {score}</p>          
           <button class="btn btn-primary h-25 mt-4" onClick={props.nextQuote}> Skip This Question </button>
           </div>
-          <div class="d-flex justify-content-evenly"     >
-          <p className="quote">Who said this quote?</p>
-          <input className="input_box"  type="text" value={answer} onChange={handleChange} />
-          <Button class="btn btn-primary h-25" onClick={handleSubmit}>Submit</Button> <br></br>
-          <p className="mt-4" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-          {answerVisible ? props.post.character.name : "Anwser Box"}
-          <p>Score={score}</p>
-        </p>
+       
           </div>
+          <div className="row col-10" >
+                {data.map((item,index) => 
+               <div class="col-sm" > 
+               <Character  key={index} imageUrl={item.imageUrl} name={item.fullName} /> </div>)}
+         </div>
         
       
-        </div>
-        {/* To learn more about this character click below */}
+       
+      {/* To learn more about this character click below */}
       {/* <Link to='/components/Person' ><h1 className="click-person"> Person Name </h1></Link> */}
       </div>
-  
-
     </div>
   );
 };
