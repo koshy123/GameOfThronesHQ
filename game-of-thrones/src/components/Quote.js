@@ -21,7 +21,7 @@ const Quote = (props) => {
       alert("Correct!");
       setScore(score + 1);
     } else {
-      alert("Wrong, hover over below");
+      alert("Anwser is "+ props.post.character.name);
     }
     setAnswer("");
     props.nextQuote();
@@ -60,7 +60,7 @@ const Quote = (props) => {
 
   return (
     <div>
-      <h1 className="title">Guess the Quote</h1>
+      <h1 className="title">Game</h1>
       <div className="got_game">
         <div className="container">
           <div class="d-flex justify-content-between">
@@ -70,26 +70,31 @@ const Quote = (props) => {
           <h3 className="quote mt-4">"{props.post.sentence}"</h3>  
 
           </div>
-          <div class="d-flex justify-content-start"     >
-          <p className="quote">Who said this quote?</p>
-          <input className="input_box"   type="text" value={answer} onChange={handleChange} />
-          <Button class="btn btn-primary h-25" onClick={handleSubmit}>Submit</Button> 
+          <div>
+          <div class="d-flex flex-column"     >
+          <p className="question ">Who said the above quote?</p>
+          <input className="input_box p-2 my-2"   type="text" value={answer} onChange={handleChange} />
+          </div>
+          <Button class="btn btn-primary h-25 " onClick={handleSubmit}>Submit</Button> 
             </div>
 
           <div className="tips">
           <p className="mt-4 a_tip" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
            {answerVisible ? props.post.character.house.name : " Hover over for the house name! "} </p>
-          <p>Current Score: {score}</p>          
+          <p className="scoreboard">Current Score: {score}</p>          
           <button class="btn btn-primary h-25 mt-4" onClick={props.nextQuote}> Skip This Question </button>
           </div>
        
           </div>
-          <div className="row col-10" >
+          <h1 className="title">Characters</h1>
+
+          <div className="container">
+          <div className="row  " >
                 {data.map((item,index) => 
-               <div class="col-sm" > 
+               <div class="col" > 
                <Character  key={index} imageUrl={item.imageUrl} name={item.fullName} /> </div>)}
          </div>
-        
+        </div>
       
        
       {/* To learn more about this character click below */}

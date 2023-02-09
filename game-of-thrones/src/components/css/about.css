@@ -13,3 +13,9 @@
     height:auto;
   }
   
+
+.api_names{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

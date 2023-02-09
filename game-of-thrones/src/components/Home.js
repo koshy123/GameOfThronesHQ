@@ -1,4 +1,5 @@
 import React, {useState, useEffect}  from "react"
+import {Link} from "react-router-dom"
 import "./css/home.css"
 import john from "./images/john.jpeg"
 import ned from "./images/ned.jpeg"
@@ -8,35 +9,20 @@ import walker from "./images/walker.jpeg"
 
 const Home =  () => {
 
-    const [data, setData] = useState([]);
-    const fetchData = () => {
-        return fetch("https://thronesapi.com/api/v2/Characters")
-              .then((response) => response.json())
-              .then((data) => setData(data));
-      }
-      useEffect(() => {
-        fetchData();
-      },[])
-      const fullName = data.map(item=> {
-            return item.fullName; 
-      })
-      
-     const Character = ({name, imageUrl}) => (
-        <div  class="row" >
-        <h2 >{name}</h2>
-        <img className=".img-circle"   src={imageUrl}/>
-        </div>
-          )
+
     return (  
         <div class="container">
-        <h1 className="title">Home Page</h1>
-        <p className="intro"> Below are the names and images of the main Characters of the Game of Thrones hit TV show.  </p>
+        <h1 className="title">Home</h1>
+        <p className="intro">"I prefer to work with grey characters rather than black and white."<br></br>
+          -George R. R. Martin
+        </p>
+        <p className="intro">"The story-maker proves a successful 'sub-creator'. He makes a Secondary World which your mind can enter. Inside it, what he relates is 'true': it accords with the laws of that world. You therefore believe it, while you are, as it were, inside. The moment disbelief arises, the spell is broken; the magic, or rather art, has failed."<br></br>
+          -J.R.R. Tolkien
+        </p>
         <div class="container" >
-        <div class="row">
-                {data.map((item,index) => 
-               <div class="col-sm" > 
-               <Character key={index} imageUrl={item.imageUrl} name={item.fullName} /> </div>)}
-         </div>
+          <Link to="/components/Quote"> True Fan? Test your Game of Thrones knowledge, with this game!</Link>
+        <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
+
          </div>
          </div>
        );

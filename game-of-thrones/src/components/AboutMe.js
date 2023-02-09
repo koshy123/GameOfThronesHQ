@@ -4,15 +4,17 @@ import "./css/about.css"
 const AboutMe =  () => {
     return (
          <div >
-            <h1 className="title">About This Site</h1>
+            <h1 className="title">About</h1>
             <p className="about">
-            This site was created by Jeffrey Koshy. 
+              Below are links to the API's used and the github readme for this project. Thanks
             <br></br>
-            The Game page is a guessing game based on the quote by the individual. 
-            There are two API's being used: . <br></br>
-            I do not own the right to any info on this site, it belongs to HBO, Game of Thrones series.
             </p>
-            <img className='image-pic' src='http://reelgood.com.au/app/uploads/2014/11/daenerys-dragon-reelgood.jpg'/>
+            <div className="api_names">
+             <h3>First API-   <a target="_blank" href="https://thronesapi.com/"> https://thronesapi.com/ </a></h3>
+             <h3>Second API-   <a target="_blank" href="https://thronesapi.com/swagger/index.html"> Second API - https://thronesapi.com/swagger/index.html</a></h3>
+            </div>
+            
+            <h1 className="about"> <a target="_blank" href="https://github.com/koshy123/GameOfThronesHQ">Github Repo</a></h1>
 
          </div>
        );

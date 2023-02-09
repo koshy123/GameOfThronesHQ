@@ -11,9 +11,9 @@ function NavBar () {
 return (
   <Navbar className="nav" bg="light" expand="lg">
   <Container>
-  <img  src={logo} width="100" height="50"></img>
+  <img  src={logo} className="mx-3" width="100" height="50"></img>
 
-    <Navbar.Brand href="#home" className="nav-title">Game of Thrones</Navbar.Brand>
+    <Navbar.Brand href="/" className="nav-title">Game of Thrones</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">        

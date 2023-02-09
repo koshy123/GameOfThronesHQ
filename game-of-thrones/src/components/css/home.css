@@ -17,3 +17,10 @@
     height: auto;
     width: 20%;
 }
+.image-pic{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height:auto;
+  }
+  
