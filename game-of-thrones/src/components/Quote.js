@@ -73,7 +73,7 @@ const Quote = (props) => {
           <div>
           <div class="d-flex flex-column"     >
           <p className="question ">Who said the above quote?</p>
-          <input className="input_box p-2 my-2"   type="text" value={answer} onChange={handleChange} />
+          <input className="input_box"   type="text" value={answer} onChange={handleChange} />
           </div>
           <Button class="btn btn-primary h-25 " onClick={handleSubmit}>Submit</Button> 
             </div>
@@ -82,7 +82,7 @@ const Quote = (props) => {
           <p className="mt-4 a_tip" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
            {answerVisible ? props.post.character.house.name : " Hover over for the house name! "} </p>
           <p className="scoreboard">Current Score: {score}</p>          
-          <button class="btn btn-primary h-25 mt-4" onClick={props.nextQuote}> Skip This Question </button>
+          <button class="btn btn-primary h-25 mt-4" onClick={props.nextQuote}> New Quote </button>
           </div>
        
           </div>
