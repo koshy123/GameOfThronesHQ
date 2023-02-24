@@ -4,7 +4,7 @@
 .title, .about-me{
   display: flex;
   justify-content: center;
-  color: green;
+  color: #544c2f;
   text-decoration: none;
   font-family: 'Game of Thrones';
 
@@ -14,6 +14,7 @@
 .nav{
     display: flex;
     width: 100%;
+    background-color: #f3f5da;
 }
 .nav-title{
   font-family: 'Game of Thrones'

@@ -9,7 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar () {
 return (
-  <Navbar className="nav" bg="light" expand="lg">
+  <Navbar className="nav"  expand="lg">
   <Container>
   <img  src={logo} className="mx-3" width="100" height="50"></img>
 
