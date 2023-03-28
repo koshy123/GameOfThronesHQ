@@ -1,7 +1,7 @@
 
 
 ## Project Description
-This app is intented to be for those that have watched Game of Thrones and also for those that have never seen it. They can get a good idea of the show by seeing quotes from the show and see the names of characters as well.
+This app is intented to be for those that have watched Game of Thrones, to be able to play a guessing game based on quotes by characters.
 
 ## Project Links
 - [github repo](https://github.com/koshy123/Game-Of-Thrones) 
@@ -26,7 +26,7 @@ There will also be another section about the new sequel show "House of the Drago
 
 
 ### MVP EXAMPLE
-- The axious fetch from Game of thrones API
+- The axios fetch from Game of thrones API
 - The state that is passed down from App.js to Quote.js
 - The various components that are linked to each other with Router and Link
 
